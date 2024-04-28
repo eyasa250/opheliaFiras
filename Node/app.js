@@ -1,33 +1,25 @@
+// app.js
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const dotenv = require('dotenv');
 const cors = require('cors');
 const app = express();
-app.use(express.json());
+const userRouter = require('./routes/userrouter'); // Import user router
 
-app.use(bodyParser.json());
-//const authenticate = require('./middleware/authMiddleware');
 dotenv.config();
 app.use(cors()); // Enable CORS
 
-//models
+app.use(bodyParser.json());
 
-//routers
-const userrouter = require('./routes/userrouter');
-const roomRouter = require('./routes/roomrouter');
-const taskRouter = require('./routes/taskrouter');
+// Use user router for routes related to user operations
+app.use('/user', userRouter);
 
-app.use('/user', userrouter);
-app.use('/room', roomRouter);
-app.use('/task', taskRouter);
+// Additional routers for other resources (room, task, etc.)
 
 app.get("/", (req, res) => {
   res.send("Test route is working");
 });
-
-app.use(bodyParser.json());
-
 
 const MONGODB_URI = process.env.MONGODB_URI;
 const PORT = process.env.PORT;
