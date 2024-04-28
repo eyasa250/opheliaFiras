@@ -1,11 +1,10 @@
-// models/Event.js
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const eventSchema = new Schema({
   adminId: { type: Schema.Types.ObjectId, ref: 'User' },
   roomId: { type: Schema.Types.ObjectId, ref: 'Room' },
-  taskId: { type: Schema.Types.ObjectId, ref: 'Task' },
+  tasks: [{ type: Schema.Types.ObjectId, ref: 'Task' }], // Modified to hold multiple tasks
   endTime: Date
 });
 
