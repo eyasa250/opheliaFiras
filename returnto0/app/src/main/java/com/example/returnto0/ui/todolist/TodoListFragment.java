@@ -105,7 +105,7 @@ public class TodoListFragment extends Fragment {
                     Log.d("TodoListFragment", "Card clicked: " + room.getName());
 
                     // Navigate to addtaskFragment
-                    NavController navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment);
+                    NavController navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment_activity_buttombar);
                     navController.navigate(R.id.navigation_addtask);
 
                     // Pass data to addtaskFragment

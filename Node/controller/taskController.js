@@ -1,104 +1,66 @@
+// controllers/taskController.js
 const Task = require('../model/task');
-const Room = require('../model/room'); // Assuming you have a Room model defined elsewhere
+
+// Create a new task
 exports.createTask = async (req, res) => {
-    const { name, roomId } = req.body; // The name of the task and the ID of the room it's being assigned to
-  
-    try {
-      // Optional: Check if the room exists
-      const roomExists = await Room.findById(roomId);
-      console.log("Searching for room with ID:", roomId);
-
-      if (!roomExists) {
-        return res.status(404).json({ message: "Room not found" });
-      }
-  
-      // Create the task with the specified name and room
-      const task = new Task({
-        name,
-        room: roomId // Ensure this field name matches the reference in your Task model
-      });
-  
-      await task.save();
-  
-      res.status(201).json({ message: "Task created successfully", task });
-    } catch (error) {
-      console.error(error);
-      res.status(500).json({ message: "Server Error" });
-    }
-  };
-
-
+  try {
+    const { name, difficulty } = req.body;
+    const adminId = req.user.id; // Extract admin ID from JWT token
+    const task = await Task.create({ name, difficulty, admin: adminId });
+    res.status(201).json(task);
+  } catch (error) {
+    console.error('Error creating task:', error);
+    res.status(500).json({ error: 'Internal server error' });
+  }
+};
 
 // Get all tasks
 exports.getAllTasks = async (req, res) => {
-    try {
-        const tasks = await Task.findAll();
-        res.json({ tasks });
-    } catch (error) {
-        console.error("Error fetching tasks:", error);
-        res.status(500).json({ message: "Server error" });
-    }
+  try {
+    const tasks = await Task.find({ admin: req.user.id }); // Retrieve tasks only for the admin
+    res.status(200).json(tasks);
+  } catch (error) {
+    console.error('Error getting tasks:', error);
+    res.status(500).json({ error: 'Internal server error' });
+  }
 };
 
-// Get task by ID
+// Get a task by ID
 exports.getTaskById = async (req, res) => {
+  try {
     const taskId = req.params.id;
-
-    try {
-        const task = await Task.findById(taskId);
-        if (!task) {
-            return res.status(404).json({ message: "Task not found." });
-        }
-        res.json({ task });
-    } catch (error) {
-        console.error("Error fetching task:", error);
-        res.status(500).json({ message: "Server error" });
+    const task = await Task.findOne({ _id: taskId, admin: req.user.id }); // Find task by ID for the admin
+    if (!task) {
+      return res.status(404).json({ error: 'Task not found' });
     }
+    res.status(200).json(task);
+  } catch (error) {
+    console.error('Error getting task by ID:', error);
+    res.status(500).json({ error: 'Internal server error' });
+  }
 };
 
-// Update task by ID
-exports.updateTaskById = async (req, res) => {
+// Update a task by ID
+exports.updateTask = async (req, res) => {
+  try {
     const taskId = req.params.id;
-    try {
-        const { title, description, dueDate, completed } = req.body;
-        const updatedTask = await Task.update(
-            { title, description, dueDate, completed },
-            { where: { id: taskId } }
-        );
-        if (updatedTask[0] === 0) {
-            return res.status(404).json({ message: "Task not found." });
-        }
-        res.json({ message: "Task updated successfully" });
-    } catch (error) {
-        console.error("Error updating task:", error);
-        res.status(500).json({ message: "Server error" });
-    }
+    const { name, difficulty } = req.body;
+    const updatedTask = await Task.findOneAndUpdate({ _id: taskId, admin: req.user.id }, { name, difficulty }, { new: true });
+    res.status(200).json(updatedTask);
+  } catch (error) {
+    console.error('Error updating task:', error);
+    res.status(500).json({ error: 'Internal server error' });
+  }
 };
 
-// Delete task by ID
-exports.deleteTaskById = async (req, res) => {
+// Delete a task by ID
+exports.deleteTask = async (req, res) => {
+  try {
     const taskId = req.params.id;
-    try {
-        const deletedTaskCount = await Task.destroy({ where: { id: taskId } });
-        if (deletedTaskCount === 0) {
-            return res.status(404).json({ message: "Task not found." });
-        }
-        res.json({ message: "Task deleted successfully" });
-    } catch (error) {
-        console.error("Error deleting task:", error);
-        res.status(500).json({ message: "Server error" });
-    }
+    await Task.findOneAndDelete({ _id: taskId, admin: req.user.id }); // Find and delete task by ID for the admin
+    res.status(200).json({ message: 'Task deleted successfully' });
+  } catch (error) {
+    console.error('Error deleting task:', error);
+    res.status(500).json({ error: 'Internal server error' });
+  }
 };
-exports.findTasksByRoom = async (req, res) => {
-    const { idroom } = req.params; // Accessing the idroom parameter from the URL
-    console.log("Room ID:");
-
-    try {
-        const tasks = await Task.find({ room: idroom }); // Use idroom to query tasks
-        res.json(tasks);
-    } catch (error) {
-        console.log(error);
-        res.status(500).json({ message: "Server Error" });
-    }
-};
-

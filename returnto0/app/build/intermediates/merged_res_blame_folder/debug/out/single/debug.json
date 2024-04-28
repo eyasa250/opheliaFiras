@@ -1,266 +1,254 @@
 [
     {
-        "merged": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-merged_res-47:\\xml_data_extraction_rules.xml.flat",
-        "source": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-main-49:\\xml\\data_extraction_rules.xml"
+        "merged": "com.example.returnto0.app-merged_res-47:/xml_backup_rules.xml.flat",
+        "source": "com.example.returnto0.app-main-49:/xml/backup_rules.xml"
     },
     {
-        "merged": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-merged_res-47:\\layout_add_button_item.xml.flat",
-        "source": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-main-49:\\layout\\add_button_item.xml"
+        "merged": "com.example.returnto0.app-merged_res-47:/layout_activity_create_room.xml.flat",
+        "source": "com.example.returnto0.app-main-49:/layout/activity_create_room.xml"
     },
     {
-        "merged": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-merged_res-47:\\drawable_ic_notifications_black_24dp.xml.flat",
-        "source": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-main-49:\\drawable\\ic_notifications_black_24dp.xml"
+        "merged": "com.example.returnto0.app-merged_res-47:/drawable_baseline_add_24.xml.flat",
+        "source": "com.example.returnto0.app-main-49:/drawable/baseline_add_24.xml"
     },
     {
-        "merged": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-merged_res-47:\\drawable_ic_launcher_foreground.xml.flat",
-        "source": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-main-49:\\drawable\\ic_launcher_foreground.xml"
+        "merged": "com.example.returnto0.app-merged_res-47:/drawable_ic_2.png.flat",
+        "source": "com.example.returnto0.app-main-49:/drawable/ic_2.png"
     },
     {
-        "merged": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-merged_res-47:\\layout_fragment_item.xml.flat",
-        "source": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-main-49:\\layout\\fragment_item.xml"
+        "merged": "com.example.returnto0.app-merged_res-47:/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.returnto0.app-main-49:/mipmap-hdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-merged_res-47:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-main-49:\\mipmap-xxxhdpi\\ic_launcher.webp"
+        "merged": "com.example.returnto0.app-merged_res-47:/layout_item_task.xml.flat",
+        "source": "com.example.returnto0.app-main-49:/layout/item_task.xml"
     },
     {
-        "merged": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-merged_res-47:\\drawable_ic_bed_24.xml.flat",
-        "source": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-main-49:\\drawable\\ic_bed_24.xml"
+        "merged": "com.example.returnto0.app-merged_res-47:/drawable_first_note.gif.flat",
+        "source": "com.example.returnto0.app-main-49:/drawable/first_note.gif"
     },
     {
-        "merged": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-merged_res-47:\\drawable_ic_5.png.flat",
-        "source": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-main-49:\\drawable\\ic_5.png"
+        "merged": "com.example.returnto0.app-merged_res-47:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.example.returnto0.app-main-49:/drawable/ic_launcher_background.xml"
     },
     {
-        "merged": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-merged_res-47:\\mipmap-mdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-main-49:\\mipmap-mdpi\\ic_launcher_round.webp"
+        "merged": "com.example.returnto0.app-merged_res-47:/drawable_dot.png.flat",
+        "source": "com.example.returnto0.app-main-49:/drawable/dot.png"
     },
     {
-        "merged": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-merged_res-47:\\drawable_top_background.png.flat",
-        "source": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-main-49:\\drawable\\top_background.png"
+        "merged": "com.example.returnto0.app-merged_res-47:/drawable_ca.png.flat",
+        "source": "com.example.returnto0.app-main-49:/drawable/ca.png"
     },
     {
-        "merged": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-merged_res-47:\\layout_fragment_todolist.xml.flat",
-        "source": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-main-49:\\layout\\fragment_todolist.xml"
+        "merged": "com.example.returnto0.app-merged_res-47:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.returnto0.app-main-49:/mipmap-xxhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-merged_res-47:\\drawable_btn_background_1.xml.flat",
-        "source": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-main-49:\\drawable\\btn_background_1.xml"
+        "merged": "com.example.returnto0.app-merged_res-47:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "com.example.returnto0.app-main-49:/drawable/ic_launcher_foreground.xml"
     },
     {
-        "merged": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-merged_res-47:\\drawable_ic_home_black_24dp.xml.flat",
-        "source": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-main-49:\\drawable\\ic_home_black_24dp.xml"
+        "merged": "com.example.returnto0.app-merged_res-47:/layout_fragment_create_task.xml.flat",
+        "source": "com.example.returnto0.app-main-49:/layout/fragment_create_task.xml"
     },
     {
-        "merged": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-merged_res-47:\\mipmap-xxhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-main-49:\\mipmap-xxhdpi\\ic_launcher.webp"
+        "merged": "com.example.returnto0.app-merged_res-47:/drawable_ic_5.png.flat",
+        "source": "com.example.returnto0.app-main-49:/drawable/ic_5.png"
     },
     {
-        "merged": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-merged_res-47:\\drawable_no_task.gif.flat",
-        "source": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-main-49:\\drawable\\no_task.gif"
+        "merged": "com.example.returnto0.app-merged_res-47:/layout_fragment_calendar_view.xml.flat",
+        "source": "com.example.returnto0.app-main-49:/layout/fragment_calendar_view.xml"
     },
     {
-        "merged": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-merged_res-47:\\layout_room_item.xml.flat",
-        "source": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-main-49:\\layout\\room_item.xml"
-    },
-    {
-        "merged": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-merged_res-47:\\navigation_mobile_navigation.xml.flat",
-        "source": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-main-49:\\navigation\\mobile_navigation.xml"
-    },
-    {
-        "merged": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-merged_res-47:\\drawable_ic_2.png.flat",
-        "source": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-main-49:\\drawable\\ic_2.png"
-    },
-    {
-        "merged": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-merged_res-47:\\layout_fragment_todo_list.xml.flat",
-        "source": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-main-49:\\layout\\fragment_todo_list.xml"
+        "merged": "com.example.returnto0.app-merged_res-47:/drawable_btn_background_2.xml.flat",
+        "source": "com.example.returnto0.app-main-49:/drawable/btn_background_2.xml"
     },
     {
         "merged": "com.example.returnto0.app-merged_res-47:/layout_fragment_addtask.xml.flat",
         "source": "com.example.returnto0.app-main-49:/layout/fragment_addtask.xml"
     },
     {
-        "merged": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-merged_res-47:\\drawable_ic_4.png.flat",
-        "source": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-main-49:\\drawable\\ic_4.png"
+        "merged": "com.example.returnto0.app-merged_res-47:/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "com.example.returnto0.app-main-49:/mipmap-xxhdpi/ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-merged_res-47:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-main-49:\\mipmap-xxhdpi\\ic_launcher_round.webp"
+        "merged": "com.example.returnto0.app-merged_res-47:/drawable_top_background.png.flat",
+        "source": "com.example.returnto0.app-main-49:/drawable/top_background.png"
     },
     {
-        "merged": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-merged_res-47:\\drawable_btn_background.xml.flat",
-        "source": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-main-49:\\drawable\\btn_background.xml"
+        "merged": "com.example.returnto0.app-merged_res-47:/drawable_ic_1.png.flat",
+        "source": "com.example.returnto0.app-main-49:/drawable/ic_1.png"
     },
     {
-        "merged": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-merged_res-47:\\drawable_correct.png.flat",
-        "source": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-main-49:\\drawable\\correct.png"
+        "merged": "com.example.returnto0.app-merged_res-47:/drawable_more.png.flat",
+        "source": "com.example.returnto0.app-main-49:/drawable/more.png"
     },
     {
-        "merged": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-merged_res-47:\\drawable_baseline_assignment_24.xml.flat",
-        "source": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-main-49:\\drawable\\baseline_assignment_24.xml"
+        "merged": "com.example.returnto0.app-merged_res-47:/drawable_btn_background.xml.flat",
+        "source": "com.example.returnto0.app-main-49:/drawable/btn_background.xml"
     },
     {
-        "merged": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-merged_res-47:\\layout_fragment_notification.xml.flat",
-        "source": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-main-49:\\layout\\fragment_notification.xml"
+        "merged": "com.example.returnto0.app-merged_res-47:/drawable_no_task.gif.flat",
+        "source": "com.example.returnto0.app-main-49:/drawable/no_task.gif"
     },
     {
-        "merged": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-merged_res-47:\\drawable_ic_add_black_24dp.xml.flat",
-        "source": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-main-49:\\drawable\\ic_add_black_24dp.xml"
+        "merged": "com.example.returnto0.app-merged_res-47:/drawable_btn_background_1.xml.flat",
+        "source": "com.example.returnto0.app-main-49:/drawable/btn_background_1.xml"
     },
     {
-        "merged": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-merged_res-47:\\layout_fragment_profile.xml.flat",
-        "source": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-main-49:\\layout\\fragment_profile.xml"
+        "merged": "com.example.returnto0.app-merged_res-47:/drawable_ic_4.png.flat",
+        "source": "com.example.returnto0.app-main-49:/drawable/ic_4.png"
     },
     {
-        "merged": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-merged_res-47:\\drawable_btn_border.xml.flat",
-        "source": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-main-49:\\drawable\\btn_border.xml"
+        "merged": "com.example.returnto0.app-merged_res-47:/layout_fragment_profile.xml.flat",
+        "source": "com.example.returnto0.app-main-49:/layout/fragment_profile.xml"
     },
     {
-        "merged": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-merged_res-47:\\layout_activity_buttombar.xml.flat",
-        "source": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-main-49:\\layout\\activity_buttombar.xml"
+        "merged": "com.example.returnto0.app-merged_res-47:/drawable_correct.png.flat",
+        "source": "com.example.returnto0.app-main-49:/drawable/correct.png"
     },
     {
-        "merged": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-merged_res-47:\\drawable_completed.gif.flat",
-        "source": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-main-49:\\drawable\\completed.gif"
+        "merged": "com.example.returnto0.app-merged_res-47:/layout_fragment_todolistold.xml.flat",
+        "source": "com.example.returnto0.app-main-49:/layout/fragment_todolistold.xml"
     },
     {
-        "merged": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-merged_res-47:\\mipmap-anydpi_ic_launcher.xml.flat",
-        "source": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-main-49:\\mipmap-anydpi\\ic_launcher.xml"
+        "merged": "com.example.returnto0.app-merged_res-47:/drawable_ic_bed_24.xml.flat",
+        "source": "com.example.returnto0.app-main-49:/drawable/ic_bed_24.xml"
     },
     {
-        "merged": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-merged_res-47:\\mipmap-xhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-main-49:\\mipmap-xhdpi\\ic_launcher.webp"
+        "merged": "com.example.returnto0.app-merged_res-47:/layout_fragment_item.xml.flat",
+        "source": "com.example.returnto0.app-main-49:/layout/fragment_item.xml"
     },
     {
-        "merged": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-merged_res-47:\\layout_item_task.xml.flat",
-        "source": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-main-49:\\layout\\item_task.xml"
+        "merged": "com.example.returnto0.app-merged_res-47:/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "com.example.returnto0.app-main-49:/mipmap-hdpi/ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-merged_res-47:\\layout_dialog_completed_theme.xml.flat",
-        "source": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-main-49:\\layout\\dialog_completed_theme.xml"
+        "merged": "com.example.returnto0.app-merged_res-47:/drawable_ic_home_black_24dp.xml.flat",
+        "source": "com.example.returnto0.app-main-49:/drawable/ic_home_black_24dp.xml"
     },
     {
-        "merged": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-merged_res-47:\\drawable_ic_1.png.flat",
-        "source": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-main-49:\\drawable\\ic_1.png"
+        "merged": "com.example.returnto0.app-merged_res-47:/drawable_alert.gif.flat",
+        "source": "com.example.returnto0.app-main-49:/drawable/alert.gif"
     },
     {
-        "merged": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-merged_res-47:\\drawable_first_note.gif.flat",
-        "source": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-main-49:\\drawable\\first_note.gif"
+        "merged": "com.example.returnto0.app-merged_res-47:/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.returnto0.app-main-49:/mipmap-mdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-merged_res-47:\\drawable_more.png.flat",
-        "source": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-main-49:\\drawable\\more.png"
+        "merged": "com.example.returnto0.app-merged_res-47:/drawable_ic_arrow_back_black_24dp.xml.flat",
+        "source": "com.example.returnto0.app-main-49:/drawable/ic_arrow_back_black_24dp.xml"
     },
     {
-        "merged": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-merged_res-47:\\xml_network_security_config.xml.flat",
-        "source": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-main-49:\\xml\\network_security_config.xml"
+        "merged": "com.example.returnto0.app-merged_res-47:/xml_data_extraction_rules.xml.flat",
+        "source": "com.example.returnto0.app-main-49:/xml/data_extraction_rules.xml"
     },
     {
-        "merged": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-merged_res-47:\\layout_fragment_calendar_view.xml.flat",
-        "source": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-main-49:\\layout\\fragment_calendar_view.xml"
+        "merged": "com.example.returnto0.app-merged_res-47:/drawable_ic_3.png.flat",
+        "source": "com.example.returnto0.app-main-49:/drawable/ic_3.png"
     },
     {
-        "merged": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-merged_res-47:\\layout_activity_main.xml.flat",
-        "source": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-main-49:\\layout\\activity_main.xml"
+        "merged": "com.example.returnto0.app-merged_res-47:/drawable_ic_notifications_black_24dp.xml.flat",
+        "source": "com.example.returnto0.app-main-49:/drawable/ic_notifications_black_24dp.xml"
     },
     {
-        "merged": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-merged_res-47:\\drawable_ic_3.png.flat",
-        "source": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-main-49:\\drawable\\ic_3.png"
+        "merged": "com.example.returnto0.app-merged_res-47:/drawable_calendar.png.flat",
+        "source": "com.example.returnto0.app-main-49:/drawable/calendar.png"
     },
     {
-        "merged": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-merged_res-47:\\drawable_ic_arrow_back_black_24dp.xml.flat",
-        "source": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-main-49:\\drawable\\ic_arrow_back_black_24dp.xml"
+        "merged": "com.example.returnto0.app-merged_res-47:/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.returnto0.app-main-49:/mipmap-xhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-merged_res-47:\\xml_backup_rules.xml.flat",
-        "source": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-main-49:\\xml\\backup_rules.xml"
+        "merged": "com.example.returnto0.app-merged_res-47:/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "com.example.returnto0.app-main-49:/mipmap-xhdpi/ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-merged_res-47:\\drawable_btn_background_2.xml.flat",
-        "source": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-main-49:\\drawable\\btn_background_2.xml"
+        "merged": "com.example.returnto0.app-merged_res-47:/layout_dialog_completed_theme.xml.flat",
+        "source": "com.example.returnto0.app-main-49:/layout/dialog_completed_theme.xml"
     },
     {
-        "merged": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-merged_res-47:\\layout_fragment_create_task.xml.flat",
-        "source": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-main-49:\\layout\\fragment_create_task.xml"
+        "merged": "com.example.returnto0.app-merged_res-47:/drawable_ic_dashboard_black_24dp.xml.flat",
+        "source": "com.example.returnto0.app-main-49:/drawable/ic_dashboard_black_24dp.xml"
     },
     {
-        "merged": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-merged_res-47:\\mipmap-anydpi_ic_launcher_round.xml.flat",
-        "source": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-main-49:\\mipmap-anydpi\\ic_launcher_round.xml"
+        "merged": "com.example.returnto0.app-merged_res-47:/drawable_completed.gif.flat",
+        "source": "com.example.returnto0.app-main-49:/drawable/completed.gif"
     },
     {
-        "merged": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-merged_res-47:\\drawable_ca.png.flat",
-        "source": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-main-49:\\drawable\\ca.png"
+        "merged": "com.example.returnto0.app-merged_res-47:/drawable_btn_border.xml.flat",
+        "source": "com.example.returnto0.app-main-49:/drawable/btn_border.xml"
     },
     {
-        "merged": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-merged_res-47:\\layout_activity_create_room.xml.flat",
-        "source": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-main-49:\\layout\\activity_create_room.xml"
+        "merged": "com.example.returnto0.app-merged_res-47:/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "com.example.returnto0.app-main-49:/mipmap-mdpi/ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-merged_res-47:\\mipmap-mdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-main-49:\\mipmap-mdpi\\ic_launcher.webp"
+        "merged": "com.example.returnto0.app-merged_res-47:/drawable_profile.png.flat",
+        "source": "com.example.returnto0.app-main-49:/drawable/profile.png"
     },
     {
-        "merged": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-merged_res-47:\\drawable_alert.gif.flat",
-        "source": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-main-49:\\drawable\\alert.gif"
+        "merged": "com.example.returnto0.app-merged_res-47:/drawable_baseline_assignment_24.xml.flat",
+        "source": "com.example.returnto0.app-main-49:/drawable/baseline_assignment_24.xml"
     },
     {
-        "merged": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-merged_res-47:\\drawable_profile.png.flat",
-        "source": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-main-49:\\drawable\\profile.png"
+        "merged": "com.example.returnto0.app-merged_res-47:/layout_fragment_todo_list.xml.flat",
+        "source": "com.example.returnto0.app-main-49:/layout/fragment_todo_list.xml"
     },
     {
-        "merged": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-merged_res-47:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-main-49:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+        "merged": "com.example.returnto0.app-merged_res-47:/layout_fragment_notification.xml.flat",
+        "source": "com.example.returnto0.app-main-49:/layout/fragment_notification.xml"
     },
     {
-        "merged": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-merged_res-47:\\drawable_baseline_add_24.xml.flat",
-        "source": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-main-49:\\drawable\\baseline_add_24.xml"
+        "merged": "com.example.returnto0.app-merged_res-47:/drawable_ic_add_black_24dp.xml.flat",
+        "source": "com.example.returnto0.app-main-49:/drawable/ic_add_black_24dp.xml"
     },
     {
-        "merged": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-merged_res-47:\\layout_fragment_home.xml.flat",
-        "source": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-main-49:\\layout\\fragment_home.xml"
+        "merged": "com.example.returnto0.app-merged_res-47:/menu_bottom_nav_menu.xml.flat",
+        "source": "com.example.returnto0.app-main-49:/menu/bottom_nav_menu.xml"
     },
     {
-        "merged": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-merged_res-47:\\drawable_ic_dashboard_black_24dp.xml.flat",
-        "source": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-main-49:\\drawable\\ic_dashboard_black_24dp.xml"
+        "merged": "com.example.returnto0.app-merged_res-47:/xml_network_security_config.xml.flat",
+        "source": "com.example.returnto0.app-main-49:/xml/network_security_config.xml"
     },
     {
-        "merged": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-merged_res-47:\\layout_fragment_todolistold.xml.flat",
-        "source": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-main-49:\\layout\\fragment_todolistold.xml"
+        "merged": "com.example.returnto0.app-merged_res-47:/layout_activity_buttombar.xml.flat",
+        "source": "com.example.returnto0.app-main-49:/layout/activity_buttombar.xml"
     },
     {
-        "merged": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-merged_res-47:\\drawable_calendar.png.flat",
-        "source": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-main-49:\\drawable\\calendar.png"
+        "merged": "com.example.returnto0.app-merged_res-47:/layout_room_item.xml.flat",
+        "source": "com.example.returnto0.app-main-49:/layout/room_item.xml"
     },
     {
-        "merged": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-merged_res-47:\\drawable_background.png.flat",
-        "source": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-main-49:\\drawable\\background.png"
+        "merged": "com.example.returnto0.app-merged_res-47:/navigation_mobile_navigation.xml.flat",
+        "source": "com.example.returnto0.app-main-49:/navigation/mobile_navigation.xml"
     },
     {
-        "merged": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-merged_res-47:\\layout_fragment_addtask.xml.flat",
-        "source": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-main-49:\\layout\\fragment_addtask.xml"
+        "merged": "com.example.returnto0.app-merged_res-47:/mipmap-anydpi_ic_launcher_round.xml.flat",
+        "source": "com.example.returnto0.app-main-49:/mipmap-anydpi/ic_launcher_round.xml"
     },
     {
-        "merged": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-merged_res-47:\\mipmap-hdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-main-49:\\mipmap-hdpi\\ic_launcher_round.webp"
+        "merged": "com.example.returnto0.app-merged_res-47:/layout_fragment_home.xml.flat",
+        "source": "com.example.returnto0.app-main-49:/layout/fragment_home.xml"
     },
     {
-        "merged": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-merged_res-47:\\drawable_ic_launcher_background.xml.flat",
-        "source": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-main-49:\\drawable\\ic_launcher_background.xml"
+        "merged": "com.example.returnto0.app-merged_res-47:/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "com.example.returnto0.app-main-49:/mipmap-xxxhdpi/ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-merged_res-47:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-main-49:\\mipmap-xhdpi\\ic_launcher_round.webp"
+        "merged": "com.example.returnto0.app-merged_res-47:/mipmap-anydpi_ic_launcher.xml.flat",
+        "source": "com.example.returnto0.app-main-49:/mipmap-anydpi/ic_launcher.xml"
     },
     {
-        "merged": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-merged_res-47:\\mipmap-hdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-main-49:\\mipmap-hdpi\\ic_launcher.webp"
+        "merged": "com.example.returnto0.app-merged_res-47:/drawable_background.png.flat",
+        "source": "com.example.returnto0.app-main-49:/drawable/background.png"
     },
     {
-        "merged": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-merged_res-47:\\menu_bottom_nav_menu.xml.flat",
-        "source": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-main-49:\\menu\\bottom_nav_menu.xml"
+        "merged": "com.example.returnto0.app-merged_res-47:/layout_add_button_item.xml.flat",
+        "source": "com.example.returnto0.app-main-49:/layout/add_button_item.xml"
     },
     {
-        "merged": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-merged_res-47:\\drawable_dot.png.flat",
-        "source": "C:\\Users\\PC\\.gradle\\native\\gradle-8.2\\daemon\\8.2\\com.example.returnto0.app-main-49:\\drawable\\dot.png"
+        "merged": "com.example.returnto0.app-merged_res-47:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.returnto0.app-main-49:/mipmap-xxxhdpi/ic_launcher_round.webp"
     }
 ]
