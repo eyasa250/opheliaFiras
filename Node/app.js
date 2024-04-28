@@ -14,6 +14,7 @@ app.use(bodyParser.json());
 
 // Use user router for routes related to user operations
 app.use('/user', userRouter);
+app.use('/events', eventRouter);
 
 // Additional routers for other resources (room, task, etc.)
 

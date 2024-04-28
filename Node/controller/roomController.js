@@ -1,73 +1,60 @@
-const Room = require('../model/room'); // Import the Room model
-
-// Get all rooms
-exports.getAllRooms = async (req, res) => {
-  try {
-    const rooms = await Room.find();
-    res.json(rooms);
-  } catch (error) {
-    console.error(error);
-    res.status(500).json({ message: "Server Error" });
-  }
-};
-
-// Get a single room by ID
-exports.getRoomById = async (req, res) => {
-  const { id } = req.params;
-  try {
-    const foundRoom = await Room.findById(id);
-    if (!foundRoom) {
-      return res.status(404).json({ message: "Room not found" });
-    }
-    res.json(foundRoom);
-  } catch (error) {
-    console.error(error);
-    res.status(500).json({ message: "Server Error" });
-  }
-};
+// controllers/roomController.js
+const Room = require('../model/room');
 
 // Create a new room
 exports.createRoom = async (req, res) => {
-  const { nom } = req.body;
   try {
-    const newRoom = await Room.create({ nom });
-    res.status(201).json(newRoom);
+    const { nom } = req.body;
+    const adminId = req.user.id; // Extract admin ID from JWT token
+    const room = await Room.create({ nom, admin: adminId });
+    res.status(201).json(room);
   } catch (error) {
-    console.error(error);
-    res.status(500).json({ message: "Server Error" });
+    console.error('Error creating room:', error);
+    res.status(500).json({ error: 'Internal server error' });
   }
 };
 
-// Update an existing room
+// Get all rooms for the admin
+exports.getAllRooms = async (req, res) => {
+  try {
+    const rooms = await Room.find({ admin: req.user.id });
+    res.status(200).json(rooms);
+  } catch (error) {
+    console.error('Error getting rooms:', error);
+    res.status(500).json({ error: 'Internal server error' });
+  }
+};
+
+// Get a room by ID for the admin
+exports.getRoomById = async (req, res) => {
+  try {
+    const roomId = req.params.id;
+    const room = await Room.findOne({ _id: roomId, admin: req.user.id });
+    if (!room) {
+      return res.status(404).json({ error: 'Room not found' });
+    }
+    res.status(200).json(room);
+  } catch (error) {
+    console.error('Error getting room by ID:', error);
+    res.status(500).json({ error: 'Internal server error' });
+  }
+};
+
+// Update a room by ID for the admin
 exports.updateRoom = async (req, res) => {
-  const { id } = req.params;
-  const { nom } = req.body;
   try {
-    const foundRoom = await Room.findByPk(id);
-    if (!foundRoom) {
-      return res.status(404).json({ message: "Room not found" });
-    }
-    foundRoom.nom = nom;
-    await foundRoom.save();
-    res.json(foundRoom);
+    const roomId = req.params.id;
+    const { nom } = req.body;
+    const updatedRoom = await Room.findOneAndUpdate({ _id: roomId, admin: req.user.id }, { nom }, { new: true });
+    res.status(200).json(updatedRoom);
   } catch (error) {
-    console.error(error);
-    res.status(500).json({ message: "Server Error" });
+    console.error('Error updating room:', error);
+    res.status(500).json({ error: 'Internal server error' });
   }
 };
 
-// Delete an existing room
+// Delete a room by ID for the admin
 exports.deleteRoom = async (req, res) => {
-  const { id } = req.params;
   try {
-    const foundRoom = await Room.findByPk(id);
-    if (!foundRoom) {
-      return res.status(404).json({ message: "Room not found" });
-    }
-    await foundRoom.destroy();
-    res.status(204).end();
-  } catch (error) {
-    console.error(error);
-    res.status(500).json({ message: "Server Error" });
-  }
-};
+    const roomId = req.params.id;
+    await Room.findOneAndDelete({ _id: roomId, admin: req.use

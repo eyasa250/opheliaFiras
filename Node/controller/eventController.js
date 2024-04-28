@@ -1,6 +1,6 @@
 // controllers/eventController.js
 const User = require('../models/User');
-const Event = require('../models/Event');
+const Event = require('../model/event');
 
 exports.createEvent = async (req, res) => {
   try {
@@ -20,4 +20,34 @@ exports.createEvent = async (req, res) => {
     console.error('Error creating event:', error);
     res.status(500).json({ error: 'Internal server error' });
   }
+
+ // Function to list events for members
+exports.listEventsForMember = async (req, res) => {
+    try {
+      // Get memberId from the JWT token payload
+      const memberId = req.user.id;
+  
+      // Find events associated with the member
+      const events = await Event.find({ memberId });
+  
+      res.status(200).json({ events });
+    } catch (error) {
+      console.error('Error listing events for member:', error);
+      res.status(500).json({ error: 'Internal server error' });
+    }
+  }; 
+ // Function to list events for admin
+exports.listEventsForAdmin = async (req, res) => {
+    try {
+      // Get adminId from the JWT token payload
+      const adminId = req.user.id;
+  
+      // Find events created by the admin
+      const events = await Event.find({ adminId });
+  
+      res.status(200).json({ events });
+    } catch (error) {
+      console.error('Error listing events for admin:', error);
+      res.status(500).json({ error: 'Internal server error' });
+    } }; 
 };

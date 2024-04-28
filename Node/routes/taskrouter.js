@@ -1,22 +1,22 @@
 const express = require('express');
 const router = express.Router();
 const taskController = require('../controller/taskController');
+const authenticate = require('../config/authentificate');
 
-// Route to create a new task
-router.post('/addTaskToRoom', taskController.createTask);
+// Create a new task
+router.post('/', authenticate, taskController.createTask);
 
-// Route to get all tasks
-router.get('/', taskController.getAllTasks);
+// Get all tasks
+router.get('/', authenticate, taskController.getAllTasks);
 
-// Route to get a task by ID
-router.get('/:id', taskController.getTaskById);
-//get tasks of a room
-router.get('/room/:idroom', taskController.findTasksByRoom);
+// Get a task by ID
+router.get('/:id', authenticate, taskController.getTaskById);
 
-// Route to update a task by ID
-router.put('/:id', taskController.updateTaskById);
+// Update a task by ID
+router.put('/:id', authenticate, taskController.updateTask);
 
-// Route to delete a task by ID
-router.delete('/:id', taskController.deleteTaskById);
+// Delete a task by ID
+router.delete('/:id', authenticate, taskController.deleteTask);
+
 
 module.exports = router;
