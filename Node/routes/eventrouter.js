@@ -1,18 +1,25 @@
-// routes/events.js
-/*
+
+
 const express = require('express');
 const router = express.Router();
 const eventController = require('../controller/eventController');
-const authenticate = require('../config/authentificate');
 
-// Create event
-router.post('/create',  eventController.createEvent);
+// Créer un événement
+router.post('/create', eventController.createEvent);
 
-// List events for member
-router.get('/member', eventController.listEventsForMember);
+// Obtenir tous les événements
+router.get('/', eventController.getAllEvents);
 
-// List events for admin
-router.get('/admin',  eventController.listEventsForAdmin);
+// Obtenir un événement par son ID
+router.get('/:id', eventController.getEventById);
 
+// Mettre à jour un événement par son ID
+router.put('/:id', eventController.updateEventById);
 
-module.exports = router;*/
+// Supprimer un événement par son ID
+router.delete('/:id', eventController.deleteEventById);
+
+// Partager un événement de manière aléatoire entre tous les membres de la famille
+router.post('/shareAllRandomly', eventController.shareAllEventsRandomly);
+
+module.exports = router;

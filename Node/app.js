@@ -14,15 +14,15 @@ app.use(cors());
 // Routers
 const userRouter = require('./routes/userrouter');
 const roomRouter = require('./routes/roomRouter');
-const taskRouter = require('./routes/taskRouter');
+const taskRouter = require('./routes/taskrouter');
 const familyRoutes = require('./routes/familyroute');
- //const eventRouter= require('./routes/eventrouter');
+const eventRouter= require('./routes/eventrouter');
 
 // Apply authentication middleware to specific routes
 app.use('/room', authenticate, roomRouter);
 app.use('/task', authenticate, taskRouter);
 app.use('/family', authenticate, familyRoutes);
-//app.use('/events',authenticate, eventRouter);
+app.use('/events',authenticate, eventRouter);
 
 
 // User router without authentication on signup
