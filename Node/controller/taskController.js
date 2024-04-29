@@ -35,8 +35,8 @@ exports.createTask = async (req, res) => {
 // Get all tasks
 exports.getAllTasks = async (req, res) => {
     try {
-        const tasks = await Task.findAll();
-        res.json({ tasks });
+        const tasks = await Task.find();
+        res.json( tasks );
     } catch (error) {
         console.error("Error fetching tasks:", error);
         res.status(500).json({ message: "Server error" });

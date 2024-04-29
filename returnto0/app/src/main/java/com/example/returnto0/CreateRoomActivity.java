@@ -42,7 +42,7 @@ public class CreateRoomActivity extends AppCompatActivity {
     }
 
     private void createRoom(String roomName) {
-        RoomService apiService = RetrofitClient.getClient("http://10.0.2.2:5000").create(RoomService.class);
+        RoomService apiService = RetrofitClient.getClient().create(RoomService.class);
         Call<Room> call = apiService.createRoom(new Room(roomName));
         call.enqueue(new Callback<Room>() {
             @Override

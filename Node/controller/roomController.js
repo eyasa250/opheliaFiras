@@ -1,4 +1,5 @@
 const Room = require('../model/room'); // Import the Room model
+const User = require('../model/User'); // Assurez-vous d'importer le modèle User
 
 // Get all rooms
 exports.getAllRooms = async (req, res) => {
@@ -29,8 +30,14 @@ exports.getRoomById = async (req, res) => {
 // Create a new room
 exports.createRoom = async (req, res) => {
   const { nom } = req.body;
+  const userId = req.user.id; // Assurez-vous que l'ID de l'utilisateur est bien extrait de la session ou du token JWT
+  
   try {
-    const newRoom = await Room.create({ nom });
+    const user = await User.findById(userId);
+    if (!user || user.role !== 'mere') {
+      return res.status(404).json({ error: 'Only mothers can create families' });
+  }
+    const newRoom = await Room.create({ nom ,admin:user});
     res.status(201).json(newRoom);
   } catch (error) {
     console.error(error);

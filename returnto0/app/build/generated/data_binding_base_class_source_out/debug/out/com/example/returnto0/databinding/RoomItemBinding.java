@@ -9,6 +9,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.cardview.widget.CardView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.returnto0.R;
@@ -21,14 +22,18 @@ public final class RoomItemBinding implements ViewBinding {
   private final LinearLayout rootView;
 
   @NonNull
+  public final CardView cardView1;
+
+  @NonNull
   public final ImageView imageView1;
 
   @NonNull
   public final TextView textRoomName;
 
-  private RoomItemBinding(@NonNull LinearLayout rootView, @NonNull ImageView imageView1,
-      @NonNull TextView textRoomName) {
+  private RoomItemBinding(@NonNull LinearLayout rootView, @NonNull CardView cardView1,
+      @NonNull ImageView imageView1, @NonNull TextView textRoomName) {
     this.rootView = rootView;
+    this.cardView1 = cardView1;
     this.imageView1 = imageView1;
     this.textRoomName = textRoomName;
   }
@@ -60,6 +65,12 @@ public final class RoomItemBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.cardView1;
+      CardView cardView1 = ViewBindings.findChildViewById(rootView, id);
+      if (cardView1 == null) {
+        break missingId;
+      }
+
       id = R.id.imageView1;
       ImageView imageView1 = ViewBindings.findChildViewById(rootView, id);
       if (imageView1 == null) {
@@ -72,7 +83,7 @@ public final class RoomItemBinding implements ViewBinding {
         break missingId;
       }
 
-      return new RoomItemBinding((LinearLayout) rootView, imageView1, textRoomName);
+      return new RoomItemBinding((LinearLayout) rootView, cardView1, imageView1, textRoomName);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

@@ -49,6 +49,8 @@ dependencies {
     implementation ("com.applandeo:material-calendar-view:1.9.0-rc03")
     implementation("androidx.legacy:legacy-support-v4:1.0.0")
     implementation("androidx.fragment:fragment:1.6.2")
+    implementation ("androidx.recyclerview:recyclerview:1.2.1")
+    implementation ("com.squareup.okhttp3:okhttp:4.9.0")
 
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")

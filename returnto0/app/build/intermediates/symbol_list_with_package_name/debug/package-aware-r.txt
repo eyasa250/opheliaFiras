@@ -3634,6 +3634,7 @@ id radio
 id range_picker
 id ratio
 id rectangles
+id recyclerView
 id report_drawn
 id reverseSawtooth
 id right

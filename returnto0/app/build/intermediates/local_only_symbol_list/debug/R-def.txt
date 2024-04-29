@@ -86,6 +86,7 @@ id navigation_notifications
 id navigation_profile
 id navigation_todolist
 id options
+id recyclerView
 id status
 id tableLayout
 id taskDate

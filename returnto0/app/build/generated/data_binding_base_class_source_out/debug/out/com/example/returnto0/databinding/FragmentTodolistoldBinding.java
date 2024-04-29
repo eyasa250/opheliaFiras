@@ -6,7 +6,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
-import android.widget.TableLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -59,9 +58,6 @@ public final class FragmentTodolistoldBinding implements ViewBinding {
   public final ImageView imageView6;
 
   @NonNull
-  public final TableLayout tableLayout;
-
-  @NonNull
   public final TextView textView1;
 
   @NonNull
@@ -83,10 +79,9 @@ public final class FragmentTodolistoldBinding implements ViewBinding {
       @NonNull CardView cardView2, @NonNull CardView cardView3, @NonNull CardView cardView4,
       @NonNull CardView cardView5, @NonNull CardView cardView6, @NonNull ImageView imageView1,
       @NonNull ImageView imageView2, @NonNull ImageView imageView3, @NonNull ImageView imageView4,
-      @NonNull ImageView imageView5, @NonNull ImageView imageView6,
-      @NonNull TableLayout tableLayout, @NonNull TextView textView1, @NonNull TextView textView2,
-      @NonNull TextView textView3, @NonNull TextView textView4, @NonNull TextView textView5,
-      @NonNull TextView textView6) {
+      @NonNull ImageView imageView5, @NonNull ImageView imageView6, @NonNull TextView textView1,
+      @NonNull TextView textView2, @NonNull TextView textView3, @NonNull TextView textView4,
+      @NonNull TextView textView5, @NonNull TextView textView6) {
     this.rootView = rootView;
     this.cardView1 = cardView1;
     this.cardView2 = cardView2;
@@ -100,7 +95,6 @@ public final class FragmentTodolistoldBinding implements ViewBinding {
     this.imageView4 = imageView4;
     this.imageView5 = imageView5;
     this.imageView6 = imageView6;
-    this.tableLayout = tableLayout;
     this.textView1 = textView1;
     this.textView2 = textView2;
     this.textView3 = textView3;
@@ -208,12 +202,6 @@ public final class FragmentTodolistoldBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.tableLayout;
-      TableLayout tableLayout = ViewBindings.findChildViewById(rootView, id);
-      if (tableLayout == null) {
-        break missingId;
-      }
-
       id = R.id.textView1;
       TextView textView1 = ViewBindings.findChildViewById(rootView, id);
       if (textView1 == null) {
@@ -252,8 +240,7 @@ public final class FragmentTodolistoldBinding implements ViewBinding {
 
       return new FragmentTodolistoldBinding((FrameLayout) rootView, cardView1, cardView2, cardView3,
           cardView4, cardView5, cardView6, imageView1, imageView2, imageView3, imageView4,
-          imageView5, imageView6, tableLayout, textView1, textView2, textView3, textView4,
-          textView5, textView6);
+          imageView5, imageView6, textView1, textView2, textView3, textView4, textView5, textView6);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

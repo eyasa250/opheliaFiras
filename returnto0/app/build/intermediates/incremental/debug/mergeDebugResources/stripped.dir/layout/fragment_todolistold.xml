@@ -8,23 +8,6 @@
     android:layout_height="match_parent"
     tools:context=".ui.todolistold.todolistFragment">
 
-    <TableLayout
-        android:id="@+id/tableLayout"
-        android:layout_width="318dp"
-        android:layout_height="436dp"
-        android:gravity="center"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <!-- First Row -->
-
-        <!-- Second Row -->
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
 
             <!-- First CardView in Row 1 -->
             <androidx.cardview.widget.CardView
@@ -96,9 +79,7 @@
 
             </androidx.cardview.widget.CardView>
 
-        </TableRow>
 
-        <TableRow
             android:layout_width="match_parent"
             android:layout_height="122dp">
 
@@ -173,10 +154,7 @@
 
             </androidx.cardview.widget.CardView>
 
-        </TableRow>
 
-        <!-- Third Row -->
-        <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
@@ -252,8 +230,6 @@
 
             </androidx.cardview.widget.CardView>
 
-        </TableRow>
 
-    </TableLayout>
 
 </FrameLayout>

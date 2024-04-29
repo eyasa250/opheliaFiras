@@ -8,13 +8,15 @@ public class Room  implements Serializable {
     @SerializedName("_id")
     private String id;
 
+    @SerializedName("nom")
+    private String name;
+
     public Room(String name) {
         this.name = name;
     }
 
-    @SerializedName("nom")
-    private String name;
-
+    @SerializedName("admin")
+    private String admin;
     public String getId() {
         return id;
     }
