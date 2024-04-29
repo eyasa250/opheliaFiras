@@ -7,6 +7,7 @@ const roomSchema = new mongoose.Schema({
     ref: 'User',
     required: true,
   },
+  tasks: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Task' }]
 });
 
 // Check if the model has already been compiled to prevent recompilation
