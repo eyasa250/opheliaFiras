@@ -2,10 +2,14 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const eventSchema = new Schema({
-  adminId: { type: Schema.Types.ObjectId, ref: 'User' },
-  roomId: { type: Schema.Types.ObjectId, ref: 'Room' },
-  tasks: [{ type: Schema.Types.ObjectId, ref: 'Task' }], // Modified to hold multiple tasks
-  endTime: Date
+  adminId: { type: Schema.Types.ObjectId, ref: 'User', required: true },
+  roomId: { type: Schema.Types.ObjectId, ref: 'Room', required: true },
+  tasks: [{ type: Schema.Types.ObjectId, ref: 'Task' }], 
+  endTime: { type: Date, required: true } ,
+  assignedTo: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'User'
+}
 });
 
 eventSchema.methods.assignEventToMember = async function(members) {

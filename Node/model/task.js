@@ -7,8 +7,8 @@ const taskSchema = new mongoose.Schema({
     required: true,
   },
   difficulty: {
-    type: Number,
-    required: true,
+    type: Number, // Le champ difficulty est défini comme optionnel avec une valeur par défaut de 1
+    default: 1,
   },
   admin: {
     type: mongoose.Schema.Types.ObjectId,
