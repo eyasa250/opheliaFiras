@@ -43,13 +43,6 @@
         android:text="Login"
         />
 
-    <TextView
-        android:id="@+id/tvLoginResult"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:text="Not logged in"
-        android:textSize="18sp" />
 
 
 

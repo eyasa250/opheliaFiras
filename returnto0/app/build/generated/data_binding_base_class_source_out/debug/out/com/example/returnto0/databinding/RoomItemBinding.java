@@ -4,7 +4,6 @@ package com.example.returnto0.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
@@ -25,16 +24,12 @@ public final class RoomItemBinding implements ViewBinding {
   public final CardView cardView1;
 
   @NonNull
-  public final ImageView imageView1;
-
-  @NonNull
   public final TextView textRoomName;
 
   private RoomItemBinding(@NonNull LinearLayout rootView, @NonNull CardView cardView1,
-      @NonNull ImageView imageView1, @NonNull TextView textRoomName) {
+      @NonNull TextView textRoomName) {
     this.rootView = rootView;
     this.cardView1 = cardView1;
-    this.imageView1 = imageView1;
     this.textRoomName = textRoomName;
   }
 
@@ -71,19 +66,13 @@ public final class RoomItemBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.imageView1;
-      ImageView imageView1 = ViewBindings.findChildViewById(rootView, id);
-      if (imageView1 == null) {
-        break missingId;
-      }
-
       id = R.id.text_room_name;
       TextView textRoomName = ViewBindings.findChildViewById(rootView, id);
       if (textRoomName == null) {
         break missingId;
       }
 
-      return new RoomItemBinding((LinearLayout) rootView, cardView1, imageView1, textRoomName);
+      return new RoomItemBinding((LinearLayout) rootView, cardView1, textRoomName);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

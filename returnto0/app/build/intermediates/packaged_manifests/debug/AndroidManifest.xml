@@ -28,9 +28,13 @@
         android:networkSecurityConfig="@xml/network_security_config"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+        android:testOnly="true"
         android:theme="@style/Theme.Returnto0" >
         <activity
-            android:name="com.example.returnto0.buttombar"
+            android:name="com.example.returnto0.user.SignupActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.returnto0.user.LoginActivity"
             android:exported="true" > <!-- Change exported to true to allow launching -->
             <intent-filter> <!-- Add intent filter to make it launchable -->
                 <action android:name="android.intent.action.MAIN" />
@@ -40,6 +44,9 @@
         </activity>
         <activity
             android:name="com.example.returnto0.CreateRoomActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.returnto0.buttombar"
             android:exported="false" />
 
         <provider

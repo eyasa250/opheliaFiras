@@ -46,14 +46,14 @@ public class TaskFragment extends Fragment {
 
         super.onViewCreated(view, savedInstanceState);
         TaskService TaskService = RetrofitClient.getClient().create(TaskService.class);
-        Call<List<Task>> call = TaskService.getTasks();
+        Call<List<Task>> call = TaskService.getAllTasks();
         Log.d("TodoListFragment", "API URL: " + call.request().url());
 
         taskRecyclerView = view.findViewById(R.id.task_recycler_view);
         taskRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         taskAdapter = new TaskAdapter(new ArrayList<>()); // Empty list initially
         taskRecyclerView.setAdapter(taskAdapter);
-        TaskService.getTasks().enqueue(new Callback<List<Task>>() {
+        TaskService.getAllTasks().enqueue(new Callback<List<Task>>() {
             @Override
             public void onResponse(Call<List<Task>> call, Response<List<Task>> response) {
                 if (response.isSuccessful()) {
