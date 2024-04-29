@@ -1,14 +1,16 @@
-// invalidToken.js
 const mongoose = require('mongoose');
+const TASK_NAMES = require('../config/tasks'); // Adjust path as necessary
 
-const invalidTokenSchema = new mongoose.Schema({
-    token: {
-        type: String,
-        required: true,
-        unique: true
-    }
-}, { timestamps: true });
+const roomSchema = new mongoose.Schema({
+  nom: { type: String, required: true },
+  admin: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'User',
+    required: true,
+  },
+  tasks: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Task' }]
+});
 
-const InvalidToken = mongoose.model('InvalidToken', invalidTokenSchema);
+const Room = mongoose.model('Room', roomSchema);
 
-module.exports = InvalidToken;
+module.exports = Room;

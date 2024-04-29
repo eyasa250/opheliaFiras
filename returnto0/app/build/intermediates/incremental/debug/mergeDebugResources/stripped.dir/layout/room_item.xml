@@ -3,40 +3,26 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="horizontal"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
+
 
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView1"
-        android:layout_width="0dp"
-        android:layout_height="150dp"
+        android:layout_width="386dp"
+        android:layout_height="42dp"
         android:layout_margin="8dp"
         android:layout_weight="1"
         app:cardCornerRadius="15dp">
 
-        <LinearLayout
+        <TextView
+            android:id="@+id/text_room_name"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:gravity="center"
+            android:text="roomname"
+            android:textSize="20sp" />
 
-            <!-- ImageView -->
-            <ImageView
-                android:id="@+id/imageView1"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:scaleType="centerCrop"
-                android:src="@drawable/ic_bed_24" />
-
-            <!-- TextView -->
-            <TextView
-                android:id="@+id/text_room_name"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="roomname" />
-
-        </LinearLayout>
 
     </androidx.cardview.widget.CardView>
 

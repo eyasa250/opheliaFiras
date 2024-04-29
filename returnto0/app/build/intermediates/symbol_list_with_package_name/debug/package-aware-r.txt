@@ -3298,6 +3298,7 @@ id auto
 id autoComplete
 id autoCompleteToEnd
 id autoCompleteToStart
+id bLogin
 id back
 id barrier
 id baseline
@@ -3313,8 +3314,6 @@ id bounceStart
 id button
 id button2
 id button3
-id button4
-id button5
 id buttonCreateRoom
 id buttonPanel
 id cache_measures
@@ -3420,6 +3419,8 @@ id endToStart
 id end_padder
 id enterAlways
 id enterAlwaysCollapsed
+id etEmail
+id etPassword
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
@@ -3731,6 +3732,9 @@ id tag_window_insets_animation_callback
 id taskDate
 id taskEvent
 id taskTime
+id task_checkbox
+id task_recycler_view
+id task_title
 id text
 id text2
 id textEnd
@@ -3920,6 +3924,8 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_buttombar
 layout activity_create_room
+layout activity_login
+layout activity_signup
 layout add_button_item
 layout calendar_view
 layout calendar_view_day
@@ -3946,12 +3952,15 @@ layout dialog_completed_theme
 layout fragment_addtask
 layout fragment_calendar_view
 layout fragment_create_task
+layout fragment_event
 layout fragment_home
 layout fragment_item
 layout fragment_notification
 layout fragment_profile
+layout fragment_task
 layout fragment_todo_list
 layout fragment_todolistold
+layout item_event
 layout item_task
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
@@ -4024,6 +4033,7 @@ layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
 layout support_simple_spinner_dropdown_item
+layout task_item
 menu bottom_nav_menu
 mipmap ic_launcher
 mipmap ic_launcher_round

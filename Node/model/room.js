@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-const TASK_NAMES = require('../config/tasks'); // Adjust path as necessary
 
 const roomSchema = new mongoose.Schema({
   nom: { type: String, required: true },
@@ -11,6 +10,5 @@ const roomSchema = new mongoose.Schema({
   tasks: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Task' }]
 });
 
-const Room = mongoose.model('Room', roomSchema);
-
-module.exports = Room;
+// Check if the model has already been compiled to prevent recompilation
+module.exports = mongoose.models.Room || mongoose.model('Room', roomSchema);

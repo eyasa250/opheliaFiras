@@ -17,7 +17,7 @@ public class Room  implements Serializable {
 
     @SerializedName("admin")
     private String admin;
-    public String getId() {
+    public int getId() {
         return id;
     }
 

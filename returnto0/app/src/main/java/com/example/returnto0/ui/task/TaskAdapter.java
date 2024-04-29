@@ -16,54 +16,59 @@ import com.example.returnto0.task.Task;
 import java.util.List;
 
 public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.TaskViewHolder> {
+    private List<Task> taskList;
+    private OnItemClickListener listener;
 
-    private List<Task> tasks;
-
-    public TaskAdapter(List<Task> tasks) {
-        this.tasks = tasks;
+    public TaskAdapter(List<Task> taskList) {
+        this.taskList = taskList;
     }
 
-    public void updateTasks(List<Task> tasks) {
-        this.tasks = tasks;
-        notifyDataSetChanged(); // Update UI with new data
+    public void setOnItemClickListener(OnItemClickListener listener) {
+        this.listener = listener;
     }
 
+    @NonNull
     @Override
     public TaskViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.task_item, parent, false);
-        return new TaskViewHolder(view);
+        View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.task_item, parent, false);
+        return new TaskViewHolder(itemView);
     }
 
     @Override
     public void onBindViewHolder(@NonNull TaskViewHolder holder, int position) {
-        Task task = tasks.get(position);
-        holder.titleTextView.setText(task.getName());
-        Log.d("TaskAdapter", "Task title: " + task.getName());  // Log task title
-
-        // Check if checkbox is displayed (assuming its ID is "task_checkbox")
-        boolean isChecked = holder.checkBox.isChecked();
-        Log.d("TaskAdapter", "Checkbox at position " + position + " is checked: " + isChecked);
-
-        // Checkbox can be used for future functionality if needed (currently unchecked)
-        holder.checkBox.setChecked(false); // Set checkbox to unchecked state (optional)
+        Task task = taskList.get(position);
+        holder.bind(task);
     }
-
 
     @Override
     public int getItemCount() {
-        return tasks.size();
+        return taskList.size();
     }
 
-    public class TaskViewHolder extends RecyclerView.ViewHolder {
+    public void setTaskList(List<Task> taskList) {
+        this.taskList = taskList;
+        notifyDataSetChanged();
+    }
 
-        private TextView titleTextView;
-        private CheckBox checkBox;
+    class TaskViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
+        private TextView taskNameTextView;
 
-        public TaskViewHolder(@NonNull View itemView) {
+        TaskViewHolder(@NonNull View itemView) {
             super(itemView);
-            titleTextView = itemView.findViewById(R.id.task_title);
-            checkBox = itemView.findViewById(R.id.task_checkbox);
+            taskNameTextView = itemView.findViewById(R.id.text_task_name);
+            itemView.setOnClickListener(this);
+        }
+
+        void bind(Task task) {
+            taskNameTextView.setText(task.getName());
+        }
+
+        @Override
+        public void onClick(View v) {
+            int position = getAdapterPosition();
+            if (position != RecyclerView.NO_POSITION && listener != null) {
+                listener.onItemClick(taskList.get(position));
+            }
         }
     }
 }
-

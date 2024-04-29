@@ -148,4 +148,3 @@ exports.deleteEventById = async (req, res) => {
     }
 };
 
-

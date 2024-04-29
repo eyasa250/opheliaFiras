@@ -31,12 +31,6 @@ public final class FragmentProfileBinding implements ViewBinding {
   public final AppCompatButton button3;
 
   @NonNull
-  public final AppCompatButton button4;
-
-  @NonNull
-  public final AppCompatButton button5;
-
-  @NonNull
   public final ImageView imageView;
 
   @NonNull
@@ -50,15 +44,12 @@ public final class FragmentProfileBinding implements ViewBinding {
 
   private FragmentProfileBinding(@NonNull ConstraintLayout rootView,
       @NonNull AppCompatButton button, @NonNull AppCompatButton button2,
-      @NonNull AppCompatButton button3, @NonNull AppCompatButton button4,
-      @NonNull AppCompatButton button5, @NonNull ImageView imageView, @NonNull ImageView imageView2,
+      @NonNull AppCompatButton button3, @NonNull ImageView imageView, @NonNull ImageView imageView2,
       @NonNull TextView textView, @NonNull TextView textView2) {
     this.rootView = rootView;
     this.button = button;
     this.button2 = button2;
     this.button3 = button3;
-    this.button4 = button4;
-    this.button5 = button5;
     this.imageView = imageView;
     this.imageView2 = imageView2;
     this.textView = textView;
@@ -110,18 +101,6 @@ public final class FragmentProfileBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.button4;
-      AppCompatButton button4 = ViewBindings.findChildViewById(rootView, id);
-      if (button4 == null) {
-        break missingId;
-      }
-
-      id = R.id.button5;
-      AppCompatButton button5 = ViewBindings.findChildViewById(rootView, id);
-      if (button5 == null) {
-        break missingId;
-      }
-
       id = R.id.imageView;
       ImageView imageView = ViewBindings.findChildViewById(rootView, id);
       if (imageView == null) {
@@ -147,7 +126,7 @@ public final class FragmentProfileBinding implements ViewBinding {
       }
 
       return new FragmentProfileBinding((ConstraintLayout) rootView, button, button2, button3,
-          button4, button5, imageView, imageView2, textView, textView2);
+          imageView, imageView2, textView, textView2);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
