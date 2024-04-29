@@ -5,7 +5,7 @@ const User = require('../model/User');
 
 // Créer une tâche
 exports.createTask = async (req, res) => {
-    const { names, roomName } = req.body;
+    const { names } = req.body;
     const userId = req.user.id;
 
     try {
@@ -15,18 +15,13 @@ exports.createTask = async (req, res) => {
             return res.status(403).json({ message: "Only mothers are allowed to create tasks." });
         }
 
-        // Vérifier l'existence de la chambre
-        const roomExists = await Room.findOne({ nom: roomName });
-        if (!roomExists) {
-            return res.status(404).json({ message: "Room not found" });
-        }
+        
 
         // Créer les tâches avec l'admin défini comme l'utilisateur qui crée la tâche
         const tasks = [];
         for (const name of names) {
             const task = new Task({
                 name,
-                room: roomExists._id, // Utiliser l'ID de la salle trouvée
                 admin: userId // Définir l'admin comme l'utilisateur qui crée la tâche
             });
             await task.save();
