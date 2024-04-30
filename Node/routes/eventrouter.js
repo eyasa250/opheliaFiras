@@ -23,6 +23,6 @@ router.delete('/:id', eventController.deleteEventById);
 router.post('/shareAllRandomly', eventController.shareAllEventsRandomly);
  
 // Get events assigned to the logged-in user
-router.get('/user', eventController.getUserEvents);
+router.get('/userevent', eventController.getUserEvents);
 
 module.exports = router;

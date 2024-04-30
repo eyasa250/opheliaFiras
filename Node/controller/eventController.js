@@ -49,20 +49,20 @@ exports.createEvent = async (req, res) => {
   }
 };
 
-// exports.getUserEvents = async (req, res) => {
-//     const userId = req.user.id;
+exports.getUserEvents = async (req, res) => {
+    const userId = req.user.id;
 
 
-//     try {
-//         // Find events where the user is assigned
-//         const events = await Event.find({ assignedTo: userId });
+    try {
+        // Find events where the user is assigned
+        const events = await Event.find({ assignedTo: userId });
 
-//         res.json(events);
-//     } catch (error) {
-//         console.error("Error fetching user events:", error);
-//         res.status(500).json({ message: "Server Error" });
-//     }
-// };
+        res.json(events);
+    } catch (error) {
+        console.error("Error fetching user events:", error);
+        res.status(500).json({ message: "Server Error" });
+    }
+};
 
 exports.shareAllEventsRandomly = async (req, res) => {
   const userId = req.user.id;
