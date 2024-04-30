@@ -9,24 +9,16 @@ const eventSchema = new Schema({
   assignedTo: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'User'
-}
+},
+status: { type: String, enum: ['pending', 'completed'], default: 'pending' } // Add status field
+
 });
 
-eventSchema.methods.assignEventToMember = async function(members) {
-  // Filter members who don't have any events assigned
-  const membersWithoutEvents = members.filter(member => member.events.length === 0);
 
-  if (membersWithoutEvents.length > 0) {
-    // If there are members without events, assign the event to one of them
-    const randomMember = membersWithoutEvents[Math.floor(Math.random() * membersWithoutEvents.length)];
-    await randomMember.events.push(this._id);
-    await randomMember.save();
-  } else {
-    // If all members have events, assign the event randomly to one of them
-    const randomMember = members[Math.floor(Math.random() * members.length)];
-    await randomMember.events.push(this._id);
-    await randomMember.save();
-  }
+
+eventSchema.methods.completeEvent = async function() {
+  this.status = 'completed';
+  await this.save();
 };
 
 module.exports = mongoose.model('Event', eventSchema);
