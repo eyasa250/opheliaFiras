@@ -146,5 +146,40 @@ exports.deleteEventById = async (req, res) => {
         console.error("Erreur lors de la suppression de l'événement:", error);
         res.status(500).json({ message: "Erreur du serveur" });
     }
+  // Function to update the status of an event to "completed"
+exports.completeEvent = async (req, res) => {
+    const eventId = req.params.id;
+    const userId = req.user.id;
+
+    try {
+        // Check if the event exists
+        const event = await Event.findById(eventId);
+        if (!event) {
+            return res.status(404).json({ message: "Événement introuvable" });
+        }
+
+        // Check if the user is authorized to update the status of the event
+        if (!event.assignedTo.equals(userId)) {
+            return res.status(403).json({ message: "Vous n'êtes pas autorisé à mettre à jour le statut de cet événement" });
+        }
+
+        // Update the status of the event to "completed"
+        event.status = 'completed';
+        await event.save();
+
+        // Notify the mother about the completed event
+        const motherId = event.adminId;
+        const notification = new Notification({
+            message: `L'événement ${event._id} a été complété par un membre`,
+            userId: motherId
+        });
+        await notification.save();
+
+        res.status(200).json({ message: "Événement marqué comme complété avec succès" });
+    } catch (error) {
+        console.error("Erreur lors de la mise à jour de l'événement:", error);
+        res.status(500).json({ message: "Erreur du serveur" });
+    }
+};  
 };
 

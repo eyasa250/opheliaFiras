@@ -5,38 +5,29 @@ const User = require('../model/User');
 
 // Créer une tâche
 exports.createTask = async (req, res) => {
-    const { names, roomName } = req.body;
+    const { name, difficulty } = req.body;
     const userId = req.user.id;
 
     try {
         // Vérifier si l'utilisateur a le rôle de "mère"
         const user = await User.findById(userId);
-        if (user.role !== 'mere') {
-            return res.status(403).json({ message: "Only mothers are allowed to create tasks." });
+        if (!user || user.role !== 'mere') {
+            return res.status(403).json({ message: "Seules les mères sont autorisées à créer des tâches." });
         }
 
-        // Vérifier l'existence de la chambre
-        const roomExists = await Room.findOne({ nom: roomName });
-        if (!roomExists) {
-            return res.status(404).json({ message: "Room not found" });
-        }
+        // Créer une nouvelle tâche avec l'utilisateur administrateur défini comme l'utilisateur actuel
+        const task = new Task({
+            name: name,
+            difficulty: difficulty,
+            admin: userId
+        });
 
-        // Créer les tâches avec l'admin défini comme l'utilisateur qui crée la tâche
-        const tasks = [];
-        for (const name of names) {
-            const task = new Task({
-                name,
-                room: roomExists._id, // Utiliser l'ID de la salle trouvée
-                admin: userId // Définir l'admin comme l'utilisateur qui crée la tâche
-            });
-            await task.save();
-            tasks.push(task);
-        }
+        await task.save();
 
-        res.status(201).json({ message: "Tasks created successfully", tasks });
+        res.status(201).json({ message: "Tâche créée avec succès", task });
     } catch (error) {
         console.error(error);
-        res.status(500).json({ message: "Server Error", error: error.message });
+        res.status(500).json({ message: "Erreur du serveur", error: error.message });
     }
 };
 

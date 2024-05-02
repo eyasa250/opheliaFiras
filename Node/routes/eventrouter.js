@@ -21,5 +21,6 @@ router.delete('/:id', eventController.deleteEventById);
 
 // Partager un événement de manière aléatoire entre tous les membres de la famille
 router.post('/shareAllRandomly', eventController.shareAllEventsRandomly);
+router.post('/notif', eventController.completeEvent);
 
 module.exports = router;
