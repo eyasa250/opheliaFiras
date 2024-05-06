@@ -4,6 +4,8 @@ const express = require('express');
 const router = express.Router();
 const eventController = require('../controller/eventController');
 
+
+router.post('/completevent',eventController.completeEvent);
 // Créer un événement
 router.post('/create', eventController.createEvent);
 
@@ -23,6 +25,7 @@ router.delete('/:id', eventController.deleteEventById);
 router.post('/shareAllRandomly', eventController.shareAllEventsRandomly);
  
 // Get events assigned to the logged-in user
-router.get('/userevent', eventController.getUserEvents);
+router.get('/usr/userevent', eventController.getUserEvents);
+
 
 module.exports = router;

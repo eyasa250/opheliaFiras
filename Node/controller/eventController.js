@@ -9,50 +9,48 @@ const taskController = require('./taskController');
 
 
 exports.createEvent = async (req, res) => {
-  const { roomName, taskId, endTime } = req.body;
-  const userId = req.user.id;
+    const { roomName, taskId, endTime } = req.body;
+    const userId = req.user.id;
 
-  try {
-      // Vérifier si l'utilisateur a le rôle d'admin (mère)
-      const user = await User.findById(userId);
-      if (user.role !== 'mere') {
-          return res.status(403).json({ message: "Seuls les administrateurs peuvent créer des événements." });
-      }
+    try {
+        // Vérifier si l'utilisateur a le rôle d'admin (mère)
+        const user = await User.findById(userId);
+        if (user.role !== 'mere') {
+            return res.status(403).json({ message: "Seuls les administrateurs peuvent créer des événements." });
+        }
 
-      // Vérifier l'existence de la chambre
-      const roomExists = await Room.findOne({ nom: roomName });
-      if (!roomExists) {
-          return res.status(404).json({ message: "Chambre introuvable" });
-      }
+        // Vérifier l'existence de la chambre
+        const roomExists = await Room.findOne({ nom: roomName });
+        if (!roomExists) {
+            return res.status(404).json({ message: "Chambre introuvable" });
+        }
 
-      // Vérifier l'existence de la tâche
-      const taskExists = await Task.findById(taskId);
-      if (!taskExists) {
-          return res.status(404).json({ message: "Tâche introuvable" });
-      }
+        // Vérifier l'existence de la tâche
+        const taskExists = await Task.findById(taskId);
+        if (!taskExists) {
+            return res.status(404).json({ message: "Tâche introuvable" });
+        }
 
-      // Créer l'événement avec l'admin défini comme l'utilisateur qui crée l'événement
-      const event = new Event({
-          adminId: userId,
-          roomId: roomExists._id,
-          tasks: [taskId],
-          endTime
-      });
+        // Créer l'événement avec l'admin défini comme l'utilisateur qui crée l'événement
+        const event = new Event({
+            adminId: userId,
+            roomId: roomExists._id,
+            tasks: [taskId],
+            endTime
+        });
 
-      // Sauvegarder l'événement
-      await event.save();
+        // Sauvegarder l'événement
+        await event.save();
 
-      res.status(201).json({ message: "Événement créé avec succès", event });
-  } catch (error) {
-      console.error(error);
-      res.status(500).json({ message: "Erreur du serveur", error: error.message });
-  }
+        res.status(201).json({ message: "Événement créé avec succès", event });
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ message: "Erreur du serveur", error: error.message });
+    }
 };
 
 exports.getUserEvents = async (req, res) => {
     const userId = req.user.id;
-
-
     try {
         // Find events where the user is assigned
         const events = await Event.find({ assignedTo: userId });
@@ -65,43 +63,43 @@ exports.getUserEvents = async (req, res) => {
 };
 
 exports.shareAllEventsRandomly = async (req, res) => {
-  const userId = req.user.id;
+    const userId = req.user.id;
 
-  try {
-      const user = await User.findById(userId);
-      if (user.role !== 'mere') {
-          return res.status(403).json({ message: "Seuls les administrateurs peuvent partager des événements." });
-      }
+    try {
+        const user = await User.findById(userId);
+        if (user.role !== 'mere') {
+            return res.status(403).json({ message: "Seuls les administrateurs peuvent partager des événements." });
+        }
 
-      const family = await Family.findOne({ mother: userId }).populate('members');
-      if (!family) {
-          return res.status(404).json({ message: "Famille introuvable" });
-      }
+        const family = await Family.findOne({ mother: userId }).populate('members');
+        if (!family) {
+            return res.status(404).json({ message: "Famille introuvable" });
+        }
 
-      family.members.push(userId); // Ajouter la mère à la liste des membres
+        family.members.push(userId); // Ajouter la mère à la liste des membres
 
-      const events = await Event.find();
-      if (!events || events.length === 0) {
-          return res.status(404).json({ message: "Aucun événement trouvé" });
-      }
+        const events = await Event.find();
+        if (!events || events.length === 0) {
+            return res.status(404).json({ message: "Aucun événement trouvé" });
+        }
 
-      const sharedEvents = [];
-      for (const event of events) {
-          const assignedMemberIndex = Math.floor(Math.random() * family.members.length);
-          const assignedMember = family.members[assignedMemberIndex];
-          event.assignedTo = assignedMember;
-          await event.save();
-          sharedEvents.push({
-              ...event._doc,
-              assignedMemberName: assignedMember.name // Supposant que 'name' est un champ dans le modèle User
-          });
-      }
+        const sharedEvents = [];
+        for (const event of events) {
+            const assignedMemberIndex = Math.floor(Math.random() * family.members.length);
+            const assignedMember = family.members[assignedMemberIndex];
+            event.assignedTo = assignedMember;
+            await event.save();
+            sharedEvents.push({
+                ...event._doc,
+                assignedMemberName: assignedMember.name // Supposant que 'name' est un champ dans le modèle User
+            });
+        }
 
-      res.status(200).json({ message: 'Tous les événements ont été partagés avec succès.', sharedEvents });
-  } catch (error) {
-      console.error(error);
-      res.status(500).json({ message: "Erreur du serveur", error: error.message });
-  }
+        res.status(200).json({ message: 'Tous les événements ont été partagés avec succès.', sharedEvents });
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ message: "Erreur du serveur", error: error.message });
+    }
 };
 
 
@@ -161,40 +159,46 @@ exports.deleteEventById = async (req, res) => {
         console.error("Erreur lors de la suppression de l'événement:", error);
         res.status(500).json({ message: "Erreur du serveur" });
     }
-  // Function to update the status of an event to "completed"
-exports.completeEvent = async (req, res) => {
-    const eventId = req.params.id;
-    const userId = req.user.id;
-
-    try {
-        // Check if the event exists
-        const event = await Event.findById(eventId);
-        if (!event) {
-            return res.status(404).json({ message: "Événement introuvable" });
-        }
-
-        // Check if the user is authorized to update the status of the event
-        if (!event.assignedTo.equals(userId)) {
-            return res.status(403).json({ message: "Vous n'êtes pas autorisé à mettre à jour le statut de cet événement" });
-        }
-
-        // Update the status of the event to "completed"
-        event.status = 'completed';
-        await event.save();
-
-        // Notify the mother about the completed event
-        const motherId = event.adminId;
-        const notification = new Notification({
-            message: `L'événement ${event._id} a été complété par un membre`,
-            userId: motherId
-        });
-        await notification.save();
-
-        res.status(200).json({ message: "Événement marqué comme complété avec succès" });
-    } catch (error) {
-        console.error("Erreur lors de la mise à jour de l'événement:", error);
-        res.status(500).json({ message: "Erreur du serveur" });
-    }
-};  
 };
 
+    // Function to update the status of an event to "completed"
+    exports.completeEvent = async (req, res) => {
+        const eventId = req.body.eventId;
+        const userId = req.user.id;
+
+        try {
+            // Check if the event exists
+            const event = await Event.findById(eventId);
+            if (!event) {
+                return res.status(404).json({ message: "Événement introuvable" });
+            }
+
+            // Check if the user is authorized to update the status of the event
+            if (!event.assignedTo.equals(userId)) {
+                return res.status(403).json({ message: "Vous n'êtes pas autorisé à mettre à jour le statut de cet événement" });
+            }
+
+            // Update the status of the event to "completed"
+            event.status = 'completed';
+            await event.save();
+
+            // Calculate points and add to user's wallet
+            const user = await User.findById(userId);
+            const pointsEarned = event.tasks.reduce((totalPoints, task) => totalPoints + task.points, 0);
+            user.wallet += pointsEarned;
+            await user.save();
+
+            // Notify the mother about the completed event
+            // const motherId = event.adminId;
+            // const notification = new Notification({
+            //     message: `L'événement ${event._id} a été complété par un membre`,
+            //     userId: motherId
+            // });
+            // await notification.save();
+
+            res.status(200).json({ message: "Événement marqué comme complété avec succès" });
+        } catch (error) {
+            console.error("Erreur lors de la mise à jour de l'événement:", error);
+            res.status(500).json({ message: "Erreur du serveur" });
+        }
+    };

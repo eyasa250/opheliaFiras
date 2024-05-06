@@ -10,6 +10,10 @@ const taskSchema = new mongoose.Schema({
     type: Number, // Le champ difficulty est défini comme optionnel avec une valeur par défaut de 1
     default: 1,
   },
+  points: {
+    type: Number, 
+    default: 1,
+  },
   admin: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'User',

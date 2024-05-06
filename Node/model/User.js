@@ -26,6 +26,11 @@ const userSchema = new mongoose.Schema({
   familyId: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'family'
+},
+wallet : {
+    type: Number,
+    default:0,
+   
 }
 });
 
